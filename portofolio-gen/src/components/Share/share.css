@@ -1,0 +1,49 @@
+/* Style for the share button */
+.share-button {
+    position: fixed;
+    top:7%;
+    right:50px;
+    background-color: #2c55ce; /* WhatsApp green */
+    color: white;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 24px;
+    width:40px;
+    height:40px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .share-options {
+    display: none;
+    position: fixed;
+    top: 14%;
+    right: 20px;
+    background-color:black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 999;
+  }
+  
+  .share-options.show {
+    display: block;
+  }
+  
+  .share-option {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    color:rgb(110, 98, 220);
+    font-size:.7rem;
+  }
+  
+  .share-option:hover {
+    background-color:rgb(110, 98, 220);
+    color:white;
+  }
+  
+  .share-option i {
+    margin-right: 8px;
+  }
+  

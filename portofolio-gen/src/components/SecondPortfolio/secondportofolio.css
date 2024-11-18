@@ -1,0 +1,489 @@
+@import url('https://fonts.d-port-googleapis.d-port-com/css2?family=poppins:wght@300,400,500,600,700,800,900&display=swap');
+
+span {
+    color: var(--main-color);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+:root {
+    /* --bg-color:#000000; */
+    --second-bg-color: #5a5b4e;
+    --text-colour: #ffffff;
+    --main-color: #6956e3;
+}
+
+body {
+    /* background:var(--bg-color); */
+    color: var(--text-colour);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9%;
+
+}
+
+.d-main-container {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    background-color: #0b0a0a;
+}
+
+.d-port-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.d-port-header.d-port-sticky {
+
+    border-bottom: 1.2rem solid rgba(0, 0, 0, 2);
+}
+
+.d-port-logo {
+    font-size: 1.2rem;
+    color: var(--text-colour);
+    font-weight: 802;
+    cursor: default;
+}
+
+.d-port-navbar a {
+    font-size: 1rem;
+    color: var(--text-colour);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.d-port-navbar a:hover,
+.d-port-navbar a.d-port-active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--text-colour);
+    display: none;
+}
+
+.d-port-home {
+    display: flex;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.d-port-home-content h3 {
+
+    font-size: 3.2rem;
+    font-weight: 700;
+
+}
+
+.d-port-home-content h3:nth-last-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+
+
+.d-port-home-content h1 {
+    font-size: 5.d-port-6rem;
+    font-weight: 700;
+    line-height: 1.d-port-3;
+
+}
+
+.d-port-home-content p {
+    font-size: 1.d-port-2rem;
+
+
+}
+
+.d-port-social-media a {
+    color: #ffffff;
+}
+
+.d-port-social-media a {
+    display: inline flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background: transparent;
+    border: 0.d-port-3rem solid var(--main-color);
+    border-radius: 25%;
+    font-size: 5rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+
+}
+
+.d-port-social-media a:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.d-port-btn {
+    display: inline-block;
+    padding: 1rem 2.d-port-8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 2.d-port-1rem;
+    color: #000000;
+    letter-spacing: 1rem;
+    font-weight: 709;
+    transition: 0.d-port-6s ease;
+
+}
+
+.d-port-btn:hover {
+    box-shadow: none;
+
+}
+
+.d-port-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    background: #9484df;
+}
+
+span {
+    color: #2d16c1;
+}
+
+.d-port-home-imag {
+    width: auto;
+    align-content: center;
+    align-items: center;
+
+}
+
+.d-port-about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 0 20px;
+    /* Added padding for better spacing */
+}
+
+.d-port-about-img {
+    flex: 1;
+}
+
+.d-port-about-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.d-port-about-content {
+    flex: 1;
+}
+
+.d-port-about-content h2 {
+    text-align: left;
+    line-height: 3;
+}
+
+.d-port-about-content p {
+    font-size: 1.d-port-6rem;
+    text-align: center;
+    /* Adjusted text alignment */
+    overflow-wrap: break-word;
+    /* Changed from flex to break-word for proper word wrapping */
+}
+
+.d-port-btn {
+    display: inline-block;
+    background-color: rgb(65, 65, 178);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .d-port-about-container {
+        flex-direction: column-reverse;
+        /* Change flex direction to column-reverse */
+        padding: 0;
+    }
+
+    .d-port-about-content p {
+        text-align: justify;
+        /* Adjusted text alignment */
+    }
+
+    .d-port-about-img {
+        margin-top: 20px;
+        /* Added margin to separate image from content */
+    }
+}
+
+.d-port-services h2 {
+    margin-bottom: 5rem;
+
+}
+
+.d-port-services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.d-port-services-container .d-port-services-box {
+    flex: 1 1 30rem;
+    background: #030303;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid white;
+    transition: .5 ease;
+}
+
+.d-port-services-container .d-port-services-box:hover {
+    border-color: var(--main-color);
+    transition: scale(1.02)
+}
+
+
+.d-port-services-box i {
+    font-size: 7rem;
+
+
+}
+
+.d-port-services-box h2 {
+
+    font-size: 5rem;
+}
+
+.d-port-portfolio {
+    background: #000000;
+    padding: 3rem;
+
+}
+
+.d-port-services {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.d-port-services h1 {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-size: 100%;
+
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.d-port-5rem;
+}
+
+.d-port-services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+}
+
+.d-port-services__card {
+    margin: 10px;
+    /* height: 425px; */
+    width: 300px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #0e39e6 20%, #5859b3 100%);
+    transition: 0.d-port-3s ease-in;
+}
+
+.d-port-services__card h2 {
+    text-align: center;
+}
+
+.d-port-services__card p {
+    text-align: center;
+    margin-top: -50px;
+    font-size: 15px;
+}
+
+.d-port-services__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.d-port-services__card button {
+    color: #ffffff;
+    padding: 12px 36px;
+    border: none;
+    outline: none;
+    border-radius: 21px;
+    background: #131313;
+    font-size: 2rem;
+}
+
+.d-port-services__card button:hover {
+    cursor: pointer;
+}
+
+.d-port-services__card:hover {
+    transform: scale(1.d-port-075);
+    transition: 0.d-port-3s ease-in;
+    cursor: pointer;
+}
+
+.d-port-services__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+    .d-port-services__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .d-port-services__wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .d-port-services__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .d-port-services__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.d-port-contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+.d-port-contact form .d-port-input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.d-port-contact form .d-port-input-box input,
+.d-port-contact form textarea ::placeholder {
+    width: 100%;
+    padding: 1.rem;
+    font-size: 1.6rem;
+    color:black;
+    background: #7f7bf6;
+    border-radius: .8rem;
+    margin: .7rem 0;
+
+}
+
+.d-port-contact form .d-port-input-box input {
+    width: 49%;
+
+}
+
+.d-port-contact form textarea {
+    resize: none;
+    
+}
+
+contact form .d-port-btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.d-port-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #464646;
+}
+
+.d-port-footer .d-port-footer-text p {
+    font-size: 1.d-port-6rem;
+    color: #ffffff;
+}
+
+.d-port-footer-icon a i {
+    font-size: 4rem;
+    color: yellow;
+}
+
+
+.d-port-footer-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: #000000;
+    border-radius: 50%;
+    transition: 0.d-port-5s ease;
+}
+
+.d-port-footer-icon a:hover {
+    box-shadow: 0 0 7rem #3965d3;
+}
+
+
+
+
+footer {
+    margin-top: 2rem;
+}

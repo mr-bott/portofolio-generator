@@ -1,0 +1,125 @@
+.main-foot-footer {
+    background-color: #1a1b20;
+    color: #FFFFFF;
+    width: 100%;
+    margin: 0;
+    padding: 48px 12px;
+    font-family: Arial, sans-serif;
+}
+
+.main-foot-footer-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.main-foot-footer-brand {
+    margin-bottom: 24px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-foot-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-foot-footer-description {
+    color: #A1A1AA;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.main-foot-footer-section {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.main-foot-footer-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.main-foot-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.main-foot-footer-link-item {
+    margin-bottom: 8px;
+}
+
+.main-foot-footer-link {
+    color: #A1A1AA;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.main-foot-footer-link:hover {
+    color: #FFFFFF;
+}
+
+.main-foot-footer-social {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.main-foot-social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #7C3AED;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.main-foot-social-icon:hover {
+    background-color: #6D28D9;
+}
+
+.main-foot-footer-copyright {
+    border-top: 1px solid #2D2E3A;
+    margin-top: 32px;
+    padding-top: 24px;
+    color: #A1A1AA;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-foot-footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-foot-footer-brand {
+        text-align: center;
+    }
+
+    .main-foot-footer-section {
+        text-align: center;
+    }
+}

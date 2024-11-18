@@ -1,0 +1,287 @@
+login css
+.landing-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2D1B4E 0%, #1A1625 100%);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    overflow: hidden;
+    width:100vw;
+
+  }
+
+  .content-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 80%;
+  }
+
+  .left-content {
+    flex: 0 1 40%;
+    color: white;
+    z-index: 2;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #A78BFA 0%, #60A5FA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .white-text {
+    color: white;
+  }
+
+  .main-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  .cta-buttonlogin {
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-buttonlogin:hover {
+    background-color: #1D4ED8;
+  }
+
+  .right-content {
+    flex: 0 1 45%;
+    position: relative;
+    perspective: 1000px;
+    margin-top:6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    transform: rotate(12deg) translateX(5%) translateY(-5%);
+  }
+
+  .phone-mockup {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: calc(var(--index) * 0.5s);
+  }
+
+  .phone-mockup:hover {
+    transform: translateY(-1rem);
+  }
+
+  .phone-frame {
+    background: white;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    display: block;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+
+    .phones-grid {
+      transform: none;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .left-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-heading {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .phones-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .main-heading {
+      font-size: 2rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+    }
+  }
+
+
+  /* src/components/buttonlogin.css */
+.buttonlogin-wrapper {
+    display: inline-block;
+    width: 70%;
+  }
+  
+  .buttonlogin {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #01070d;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+    width: 100%;
+  }
+  
+  .buttonlogin::before,
+  .buttonlogin::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+  }
+  
+  .buttonlogin::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .buttonlogin::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .buttonlogin:active,
+  .buttonlogin:focus {
+    outline: none;
+  }
+  
+  .buttonlogin:active::before,
+  .buttonlogin:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .buttonlogin:active::before {
+    top: 3px;
+  }
+  
+  .buttonlogin:active::after {
+    bottom: 3px;
+  }
+  
+  .buttonlogin_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #3f32bb;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .buttonlogin_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+  
+  .buttonlogin_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+  
+  .buttonlogin_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background: linear-gradient(90deg, #d82eaa 0%, #3208db 100%);
+
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .buttonlogin_text {
+    position: relative;
+    color: #000;
+  }
+  
+  .buttonlogin:hover {
+    color: #0f1923;
+  }
+  
+  .buttonlogin:hover .buttonlogin_sl {
+    width: calc(100% + 15px);
+  }
+  
+  .buttonlogin:hover .buttonlogin_lg::after {
+    background-color: #fff;
+  }
