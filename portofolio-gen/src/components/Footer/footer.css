@@ -108,6 +108,12 @@
     color: #A1A1AA;
     text-align: center;
 }
+.main-foot-mobile-view{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
