@@ -84,7 +84,7 @@
     .main-det-laptop_view {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items:flex-start;
       justify-content: center;
       width:100%;
     }

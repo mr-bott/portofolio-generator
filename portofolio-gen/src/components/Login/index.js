@@ -42,6 +42,7 @@ function Login() {
                 <span className="buttonlogin_text">Continue with Google</span>
               </span>
             </button>
+            <p>Beta version</p>
           </div>
 
         </div>
