@@ -69,7 +69,7 @@ const Footer = () => {
         <a href="/" className="main-foot-social-icon">🐦</a>
         <a href="https://github.com/mr-bott" className="main-foot-social-icon">🐱</a>
         <a
-          href="https://wa.me/8309791865?text=Hello!%20I%20would%20like%20to%20know%20more." 
+          href="https://wa.me/+918309791865?text=Hello!%20I%20would%20like%20to%20know%20more." 
           className="main-foot-social-icon"
           target="_blank"
           rel="noopener noreferrer"
