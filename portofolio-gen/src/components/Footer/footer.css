@@ -110,8 +110,9 @@
 }
 .main-foot-mobile-view{
     display: flex;
+    width:40%;
     flex-direction:row;
-    justify-content:center;
+    justify-content:space-around;
     align-items: center;
 }
 
