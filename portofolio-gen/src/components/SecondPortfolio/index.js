@@ -25,7 +25,7 @@ const SecondPortfolio = () => {
                 const data = await response.json();
                 setUserData(data);
                 setIsLoading(false); // Stop loader once data is fetched
-                console.log(data);
+        
             } else {
                 console.error("User not found");
                 setIsLoading(false); // Stop loader on error
@@ -70,7 +70,7 @@ const SecondPortfolio = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-    console.log(userData?.personalInfo?.name)
+
 
     if (isLoading){
         return(

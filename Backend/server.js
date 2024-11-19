@@ -50,7 +50,6 @@ async function uploadToCloudinary(filepath) {
 app.post('/uploadprojectimage', upload.single('image'), async (req, res) => {
   try {
     const result = await uploadToCloudinary(req.file.path);
-    console.log(result)
     res.json({ imageUrl: result });
   } catch (error) {
     console.error(error);
@@ -208,7 +207,6 @@ app.put('/api/user/email/:email', async (req, res) => {
             { $set: updateData },
             { new: true }
         );
-        console.log(updatedUser)
         if (updatedUser) {
             res.status(200).json({ message: 'User data updated successfully', user: updatedUser });
         } else {
@@ -216,7 +214,6 @@ app.put('/api/user/email/:email', async (req, res) => {
         }
 
     } catch (err) {
-      console.log(err.message )
         res.status(500).json({ message: 'Error updating user data', err});
     }
 });

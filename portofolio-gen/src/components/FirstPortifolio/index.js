@@ -29,7 +29,6 @@ function FirstPortifolio() {
                 const data = await response.json();
                 setUser(data);
                 setLoading(false); // Stop loader once data is fetched
-                console.log(data);
             } else {
                 console.error("User not found");
                 setLoading(false); // Stop loader on error

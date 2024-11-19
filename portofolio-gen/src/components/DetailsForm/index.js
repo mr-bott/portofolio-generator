@@ -46,7 +46,6 @@ const DetailsForm = () => {
         const data = await response.json();
         setFormData(data);
         setLoading(false); // Stop loader once data is fetched
-        console.log("fetched data",data);
       } else {
         console.error("User not found");
         setLoading(false); // Stop loader on error
@@ -78,10 +77,8 @@ const DetailsForm = () => {
         },
         body: JSON.stringify(formData)
       });
-      console.log("processed data", formData);
       const result = await response.json();
       if (response.ok) {
-        console.log('Data saved successfully:', result.message);
         Cookies.set('id', result.user.id, { expires: 100 });
        
         navigate(`/${page}/${result.user.id}`);
@@ -93,7 +90,7 @@ const DetailsForm = () => {
     }
   };
   
-  // console.log(formData)
+
 
   const handleProjectImageChange = (index, file) => {
     const updatedProjects = [...formData.projects];
