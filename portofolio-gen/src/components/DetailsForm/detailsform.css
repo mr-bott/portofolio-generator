@@ -84,7 +84,7 @@
     .main-det-laptop_view {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       width:100%;
     }
@@ -115,6 +115,37 @@
   @media (min-width: 768px) {
     .main-det-skills-section {
       grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+  @media screen and (max-width:768px) {
+    .main-det-portfolio-generator{
+      margin-top: 15%;
+    }
+    .main-det-h1{
+      font-size: 1.5rem;
+    }
+    .main-det-laptop_view {
+      flex-direction: column;
+      width:100%;
+    }
+    .first_half{
+      width: 100%;
+    }
+    .main-det-form-section{
+      width: 100%;
+    }
+    .main-det-input-group{
+      width: 95%;
+    }
+    .main-det-skills-section{
+      width: 95%;
+    }
+    .second_half{
+      width: 100%;
+    }
+    .ui-btn-bottom{
+      width: 95%;
     }
   }
   

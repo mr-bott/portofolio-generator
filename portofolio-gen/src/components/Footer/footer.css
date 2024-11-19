@@ -111,15 +111,31 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    .main-foot-footer{
+        padding:25px;
+    }
     .main-foot-footer-container {
-        grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
     }
 
     .main-foot-footer-brand {
         text-align: center;
+        width:100%;
     }
 
     .main-foot-footer-section {
         text-align: center;
     }
+    .main-foot-mobile-view{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .resource{
+        display: none;
+    }
+   
 }

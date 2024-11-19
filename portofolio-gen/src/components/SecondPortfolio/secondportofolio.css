@@ -233,6 +233,9 @@ span {
 }
 
 @media (max-width: 768px) {
+    .d-port-header{
+        padding: 3rem 0px;
+    }
     .d-port-about-container {
         flex-direction: column-reverse;
         /* Change flex direction to column-reverse */

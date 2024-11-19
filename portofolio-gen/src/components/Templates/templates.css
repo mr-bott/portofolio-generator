@@ -157,6 +157,9 @@
       flex-direction: column;
       gap: 2rem;
     }
+    .main-template-cards-container{
+      margin-top: 15%;
+    }
   
     .main-template-card {
       width: 100%;

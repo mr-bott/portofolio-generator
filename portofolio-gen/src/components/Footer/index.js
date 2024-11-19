@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <footer className="main-foot-footer">
       <div className="main-foot-footer-container">
+
         <div className="main-foot-footer-brand">
           <div className="main-foot-footer-logo">
             <span role="img" aria-label="logo">🐱</span>
@@ -14,38 +15,39 @@ const Footer = () => {
             Your portfolio is the story of your growth, a showcase of your skills, and a glimpse into your future potential.
           </p>
         </div>
+        <div className="main-foot-mobile-view">
+          <div className="main-foot-footer-section">
+            <h3 className="main-foot-footer-heading">Quick links</h3>
+            <ul className="main-foot-footer-links">
+              <li className="main-foot-footer-link-item">
+                <a href="/components" className="main-foot-footer-link">Components</a>
+              </li>
+              <li className="main-foot-footer-link-item">
+                <a href="/temp" className="main-foot-footer-link">Templates</a>
+              </li>
+              <li className="main-foot-footer-link-item">
+                <a href="/contact" className="main-foot-footer-link">Contact us</a>
+              </li>
+            </ul>
+          </div>
 
-        <div className="main-foot-footer-section">
-          <h3 className="main-foot-footer-heading">Quick links</h3>
-          <ul className="main-foot-footer-links">
-            <li className="main-foot-footer-link-item">
-              <a href="/components" className="main-foot-footer-link">Components</a>
-            </li>
-            <li className="main-foot-footer-link-item">
-              <a href="/temp" className="main-foot-footer-link">Templates</a>
-            </li>
-            <li className="main-foot-footer-link-item">
-              <a href="/contact" className="main-foot-footer-link">Contact us</a>
-            </li>
-          </ul>
+          <div className="main-foot-footer-section">
+            <h3 className="main-foot-footer-heading">Developers</h3>
+            <ul className="main-foot-footer-links">
+              <li className="main-foot-footer-link-item">
+                <a href="/components" className="main-foot-footer-link">Keerthana</a>
+              </li>
+              <li className="main-foot-footer-link-item">
+                <a href="https://muralikrishna-ten.vercel.app/" target="_blank" className="main-foot-footer-link">Murali Krishna</a>
+              </li>
+              <li className="main-foot-footer-link-item">
+                <a href="/contact" className="main-foot-footer-link">Roshan Sameer</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="main-foot-footer-section">
-          <h3 className="main-foot-footer-heading">Developers</h3>
-          <ul className="main-foot-footer-links">
-            <li className="main-foot-footer-link-item">
-              <a href="/components" className="main-foot-footer-link">Keerthana</a>
-            </li>
-            <li className="main-foot-footer-link-item">
-              <a href="https://muralikrishna-ten.vercel.app/" target="_blank" className="main-foot-footer-link">Murali Krishna</a>
-            </li>
-            <li className="main-foot-footer-link-item">
-              <a href="/contact" className="main-foot-footer-link">Roshan Sameer</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="main-foot-footer-section">
+        <div className="main-foot-footer-section resource">
           <h3 className="main-foot-footer-heading">Resources</h3>
           <ul className="main-foot-footer-links">
             <li className="main-foot-footer-link-item">
