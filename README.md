@@ -6,7 +6,7 @@
 ---
 
 - **Link**: https://portzen.vercel.app
-- 
+  
 ## 🚀 Features
 
 - **Dynamic Portfolio Generation**: Build a professional portfolio with minimal effort.
@@ -37,6 +37,14 @@
 - **User-Friendly**: Built with simplicity and ease of use in mind.
 - **Extensible**: Add custom features and designs with ease.
 - **Secure Authentication**: Simplify user login with Google OAuth.
+
+---
+## 🖼️ Preview
+
+> Include a screenshot or GIF of your Portfolio Generator in action, showcasing Google OAuth Login.
+![image](https://github.com/user-attachments/assets/7ff7c72b-6c0c-4604-8e41-132b4d7d5ab4)
+![image](https://github.com/user-attachments/assets/c116d2bc-9ad5-4983-837a-1d0e34e905b5)
+
 
 ---
 
@@ -85,14 +93,7 @@ Follow these steps to set up and run the project locally:
 
 ---
 
-## 🖼️ Preview
 
-> Include a screenshot or GIF of your Portfolio Generator in action, showcasing Google OAuth Login.
-![image](https://github.com/user-attachments/assets/7ff7c72b-6c0c-4604-8e41-132b4d7d5ab4)
-![image](https://github.com/user-attachments/assets/c116d2bc-9ad5-4983-837a-1d0e34e905b5)
-
-
----
 
 ## 🌍 Contributing
 
@@ -111,8 +112,8 @@ Contributions are welcome! Follow these steps to contribute:
 If you have any questions or suggestions, feel free to reach out:
 
 - **Email**: muralikrishna8309@gmail.com
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/murali-krishna-abbugondi/)
-- **GitHub**: [Your GitHub Profile](https://github.com/mr-bott)
+- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/murali-krishna-abbugondi/)
+- **GitHub**: [My GitHub Profile](https://github.com/mr-bott)
 
 ---
 
