@@ -43,6 +43,12 @@ function Login() {
               </span>
             </button>
             <p>Beta version</p>
+            <p>...</p>
+          </div>
+          <div>
+          <p className="server-delay" > --> Our servers rely on free resources,</p>
+            <p> so the first request might take up to a minute to wake Server up.  Just give it a moment, and we’ll be good to go!</p>
+
           </div>
 
         </div>

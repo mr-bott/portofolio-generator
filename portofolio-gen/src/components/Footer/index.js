@@ -36,9 +36,6 @@ const Footer = () => {
             <h3 className="main-foot-footer-heading">Developers</h3>
             <ul className="main-foot-footer-links">
               <li className="main-foot-footer-link-item">
-                <a href="/components" className="main-foot-footer-link">Keerthana</a>
-              </li>
-              <li className="main-foot-footer-link-item">
                 <a href="https://muralikrishna-ten.vercel.app/" target="_blank" className="main-foot-footer-link">Murali Krishna</a>
               </li>
               <li className="main-foot-footer-link-item">
