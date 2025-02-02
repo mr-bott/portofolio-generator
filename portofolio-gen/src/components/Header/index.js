@@ -17,7 +17,7 @@ function Header() {
       <div className="main-head-header-container">
         <div className="main-head-logo-container">
           <a href="/" className="main-head-logo-link">
-            <span className="main-head-logo-icon">"""</span>
+            <span className="main-head-logo-icon"></span>
             <span className="main-head-logo-text">PortZen</span>
           </a>
         </div>
