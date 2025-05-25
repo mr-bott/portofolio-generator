@@ -89,42 +89,8 @@ const DetailsForm = () => {
       console.error('Error saving user data:', error);
     }
   };
+
   
-
-
-  const handleProjectImageChange = (index, file) => {
-    const updatedProjects = [...formData.projects];
-    updatedProjects[index].file = file; // Temporarily store the file for upload
-    setFormData({ ...formData, projects: updatedProjects });
-  };
-
-  const saveProjectImage = async (index) => {
-    setLoading(true)
-    const project = formData.projects[index];
-    if (!project.file) return;
-
-    const imageFormData = new FormData(); // Renamed to avoid conflict
-    imageFormData.append('image', project.file); // Pass the file to FormData
-
-    try {
-      const url = process.env.REACT_APP_BACKEND_URL
-      const response = await fetch(`${url}/uploadprojectimage`, {
-        method: 'POST',
-        body: imageFormData, // Use the renamed FormData
-      });
-      const data = await response.json();
-      const updatedProjects = [...formData.projects];
-      updatedProjects[index].imageUrl = data.imageUrl; // Save the returned URL
-      delete updatedProjects[index].file; // Remove the temporary file after upload
-      setFormData({ ...formData, projects: updatedProjects });
-      setLoading(false)
-    } catch (error) {
-      console.error('Image upload failed', error);
-      setLoading(false)
-    }
-  };
-
-
 
   const handlePersonalInfoChange = (e) => {
     setFormData({
@@ -205,6 +171,42 @@ const DetailsForm = () => {
       ...formData,
       services: formData.services.filter((_, i) => i !== index)
     });
+  };
+
+
+  
+
+
+  const handleProjectImageChange = (index, file) => {
+    const updatedProjects = [...formData.projects];
+    updatedProjects[index].file = file; // Temporarily store the file for upload
+    setFormData({ ...formData, projects: updatedProjects });
+  };
+
+  const saveProjectImage = async (index) => {
+    setLoading(true)
+    const project = formData.projects[index];
+    if (!project.file) return;
+
+    const imageFormData = new FormData(); // Renamed to avoid conflict
+    imageFormData.append('image', project.file); // Pass the file to FormData
+
+    try {
+      const url = process.env.REACT_APP_BACKEND_URL
+      const response = await fetch(`${url}/uploadprojectimage`, {
+        method: 'POST',
+        body: imageFormData, // Use the renamed FormData
+      });
+      const data = await response.json();
+      const updatedProjects = [...formData.projects];
+      updatedProjects[index].imageUrl = data.imageUrl; // Save the returned URL
+      delete updatedProjects[index].file; // Remove the temporary file after upload
+      setFormData({ ...formData, projects: updatedProjects });
+      setLoading(false)
+    } catch (error) {
+      console.error('Image upload failed', error);
+      setLoading(false)
+    }
   };
 
 

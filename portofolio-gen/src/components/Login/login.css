@@ -286,3 +286,10 @@ login css
   .buttonlogin:hover .buttonlogin_lg::after {
     background-color: #fff;
   }
+
+
+  
+.countdown-small {
+  font-size: 2.5rem;
+  font-weight: bold;
+}

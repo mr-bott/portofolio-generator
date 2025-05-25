@@ -37,6 +37,7 @@ const storage = multer.diskStorage({
     cb(null, uniqueName);
   },
 });
+
 const upload = multer({ storage });
 
 // Upload image to Cloudinary and store URL in MySQL
@@ -153,6 +154,7 @@ const userSchema = new mongoose.Schema({
             duration: String
         }
     ],
+    
     aboutMe: String,
     services: [
         {

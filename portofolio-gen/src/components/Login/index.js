@@ -3,8 +3,28 @@
 
 import React from "react";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
+
 
 function Login() {
+  const navigate = useNavigate();
+  const [countdown, setCountdown] = useState(45);
+  const [message, setMessage] = useState("Loading...");
+   useEffect(() => {
+    if (countdown <= 0) {
+      setMessage("Check your internet connection or try again later.");
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setCountdown((prev) => prev - 1);
+    }, 1000);
+    setMessage(countdown);
+
+    return () => clearTimeout(timer);
+  }, [countdown]);
   const mockupImages = [
     '/images/port3.jpg',
     '/images/port4.jpg',
@@ -46,9 +66,8 @@ function Login() {
             <p>...</p>
           </div>
           <div>
-          <p className="server-delay" > --> Our servers rely on free resources,</p>
-            <p> so the first request might take up to a minute to wake Server up.  Just give it a moment, and we’ll be good to go!</p>
-
+          <p className="server-delay" > {`-->`} Our servers rely on free resources,</p>
+            <p> so the first request might take up to <span className="countdown-small">{countdown}</span> sec to wake Server up.  Just give it a moment, and we’ll be good to go!</p>
           </div>
 
         </div>
