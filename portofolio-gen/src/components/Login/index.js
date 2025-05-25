@@ -10,9 +10,12 @@ import { useState } from "react";
 
 function Login() {
   const navigate = useNavigate();
-  const [countdown, setCountdown] = useState(45);
+  const [countdown, setCountdown] = useState(null);
   const [message, setMessage] = useState("Loading...");
    useEffect(() => {
+    if (countdown===null){
+      return ;
+    }
     if (countdown <= 0) {
       setMessage("Check your internet connection or try again later.");
       return;
@@ -35,6 +38,7 @@ function Login() {
   ];
   const handleGoogle = () => {
     const url = process.env.REACT_APP_BACKEND_URL
+    setCountdown(45);
     // console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
     window.location.href = `${url}/auth/google`; // Redirect to your backend for Google login
   };
