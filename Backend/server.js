@@ -183,6 +183,7 @@ app.post('/api/user', async (req, res) => {
 
         if (user) {
             // Update user details if user already exists
+            // Note: Using findOneAndUpdate to update user details
             user = await User.findOneAndUpdate(
                 { 'personalInfo.email': email },
                 { $set: details },
