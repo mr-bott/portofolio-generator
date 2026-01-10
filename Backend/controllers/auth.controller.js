@@ -11,7 +11,7 @@ exports.googleCallback = (req, res) => {
   // JS-readable cookie
   res.cookie("token", token, {
     httpOnly: false,        // frontend can read
-    secure: process.env.Cookie_Secure,    // true in production (HTTPS)
+    secure: true,    // true in production (HTTPS)
     sameSite: "none",    // to allow cross-site
     maxAge: 24 * 60 * 60 * 1000,
   });
