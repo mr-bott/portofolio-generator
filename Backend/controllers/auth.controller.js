@@ -6,6 +6,7 @@ exports.googleCallback = (req, res) => {
     process.env.JWT_SECRET,
     { expiresIn: "1d" }
   );
+  console.log("Generated JWT:", token);
 
    res.clearCookie("token", {
     path: "/",
@@ -17,18 +18,19 @@ exports.googleCallback = (req, res) => {
     sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000,
   });
+  console.log("Cookie set with token");
 
   res.redirect(process.env.FroentendURL);
 };
 
-exports.logout = (req, res) => {
-  res.clearCookie("token", {
-    secure: true,
-    sameSite: "none",
-    path: "/"
-  });
+// exports.logout = (req, res) => {
+//   res.clearCookie("token", {
+//     secure: true,
+//     sameSite: "none",
+//     path: "/"
+//   });
 
-  req.logout?.(() => {
-    res.json({ message: "Logout success" });
-  });
-};
+//   req.logout?.(() => {
+//     res.json({ message: "Logout success" });
+//   });
+// };

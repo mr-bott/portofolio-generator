@@ -13,6 +13,6 @@ router.get(
   controller.googleCallback
 );
 
-router.get('/logout', controller.logout);
+// router.get('/logout', controller.logout);
 
 module.exports = router;
