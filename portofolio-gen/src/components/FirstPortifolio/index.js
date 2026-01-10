@@ -15,7 +15,7 @@ function FirstPortifolio() {
     const { id } = useParams();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true); // Add loading state
-    const jwt = Cookies.get("id")
+    const jwt = Cookies.get("token");
     const navigate=useNavigate();
     // Fetch user data from API
     const handleBuildButton=()=>{
@@ -24,7 +24,11 @@ function FirstPortifolio() {
     const fetchUserData = async () => {
         try {
             const url = process.env.REACT_APP_BACKEND_URL;
-            const response = await fetch(`${url}/api/user/${id}`);
+            const response = await fetch(`${url}/api/user/${id}`,
+            {
+                method: "GET",
+            }
+            );
             if (response.ok) {
                 const data = await response.json();
                 setUser(data);

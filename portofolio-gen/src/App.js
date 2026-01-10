@@ -42,30 +42,17 @@ const TokenHandler = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const query = new URLSearchParams(window.location.search);
-    const token = query.get('token');
+    const jwt = Cookies.get("token"); // read cookie set by backend
 
-    if (token) {
-      // Store the JWT token in cookies
-      Cookies.set('jwt', token, { expires: 7 });
-      // Redirect to the user details page after storing the token
-      navigate('/home');
-      // Clear the token from the URL
-      window.history.replaceState({}, document.title, window.location.pathname);
+    if (jwt) {
+      navigate("/home");
     } else {
-      // If there is no token, check if the user is authenticated
-      const jwt = Cookies.get('jwt');
-      if (!jwt) {
-        // If the user is not authenticated, redirect to the login page
-        navigate('/login');
-      } else {
-        // Redirect to the user details page
-        navigate('/home');
-      }
+      navigate("/login");
     }
   }, [navigate]);
 
   return null;
 };
+
 
 export default App;

@@ -7,8 +7,9 @@ import Header from '../Header';
 import Footer from '../Footer';
 import ImageSpinner from '../ImageSpinner';
 const DetailsForm = () => {
-  const jwt = Cookies.get('jwt');
+  const jwt = Cookies.get('token');
   const decoded = jwt ? jwtDecode(jwt) : null;
+  console.log("Decoded JWT:", decoded);
   const gmail = decoded?.email;
   const { page } = useParams();
   const navigate = useNavigate()
@@ -41,7 +42,12 @@ const DetailsForm = () => {
   const fetchUserData = async () => {
     try {
       const url = process.env.REACT_APP_BACKEND_URL;
-      const response = await fetch(`${url}/api/user/email/${gmail}`);
+      const response = await fetch(`${url}/api/user/email/${gmail}`,
+        {
+        method: "GET",
+        credentials: "include", 
+      }
+      );
       if (response.ok) {
         const data = await response.json();
         setFormData(data);
@@ -72,6 +78,7 @@ const DetailsForm = () => {
       }
       const response = await fetch(`${url}/api/user/email/${gmail}`, {
         method: 'PUT',
+        credentials: "include",
         headers: {
           'Content-Type': 'application/json'
         },
@@ -193,8 +200,9 @@ const DetailsForm = () => {
 
     try {
       const url = process.env.REACT_APP_BACKEND_URL
-      const response = await fetch(`${url}/uploadprojectimage`, {
+      const response = await fetch(`${url}/upload/image`, {
         method: 'POST',
+        credentials: "include",
         body: imageFormData, // Use the renamed FormData
       });
       const data = await response.json();

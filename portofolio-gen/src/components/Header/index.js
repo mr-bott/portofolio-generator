@@ -9,8 +9,8 @@ function Header() {
   const navigate=useNavigate();
   const handleLogout=()=>{
      Cookies.remove("id");
-     Cookies.remove("jwt");
-     navigate("/")
+     Cookies.remove("token");
+     navigate("/login");
   }
   return (
     <header className="main-head-header">
