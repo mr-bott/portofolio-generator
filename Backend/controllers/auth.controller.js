@@ -19,14 +19,13 @@ exports.googleCallback = (req, res) => {
   res.redirect(process.env.FroentendURL);
 };
 
-exports.logout = (req, res) => {
-  res.clearCookie("token");
-  res.json({ message: "Logout success" });
-};
+// exports.logout = (req, res) => {
+//   res.clearCookie("token", {
+//     secure: true,
+//     sameSite: "none",
+//   });
 
-exports.logout = (req, res) => {
-  req.logout(err => {
-    if (err) return res.status(500).json({ error: "Logout failed" });
-    res.json({ message: "Logout success" });
-  });
-};
+//   req.logout?.(() => {
+//     res.json({ message: "Logout success" });
+//   });
+// };
