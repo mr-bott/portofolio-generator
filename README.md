@@ -22,6 +22,7 @@
 ## 🛠️ Technologies Used
 
 - **MongoDB**: For secure and flexible data storage.
+-  **Redis**: For Caching frequently accessed data.
 - **Node.js**: Backend development for handling server-side operations.
 - **Express.js**: A robust web framework for building APIs.
 - **ReactJS**: For crafting an intuitive and responsive user interface.
@@ -68,10 +69,25 @@ Follow these steps to set up and run the project locally:
    - Add the following:
      ```
      MONGO_URI=<your_mongodb_connection_string>
-     PORT=5000
+     
      GOOGLE_CLIENT_ID=<your_google_client_id>
      GOOGLE_CLIENT_SECRET=<your_google_client_secret>
-     GOOGLE_CALLBACK_URL=http://localhost:5000/auth/google/callback
+     
+     CALL_BACK=http://localhost:5000/auth/google/callback
+     
+     PORT=8000
+     FroentendURL=http://localhost:3000
+
+     CLOUDINARY_CLOUD_NAME=<yours>
+     CLOUDINARY_API_KEY=<Yours>
+     CLOUDINARY_API_SECRET=<yours>
+
+     JWT_SECRET=<yours>
+
+     REDIS_URL=<yours>
+
+     Cookie_Secure=false / true dependingup on environemnt
+
      ```
 
 4. **Start the Server**:
