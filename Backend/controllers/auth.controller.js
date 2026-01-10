@@ -6,8 +6,6 @@ exports.googleCallback = (req, res) => {
     process.env.JWT_SECRET,
     { expiresIn: "1d" }
   );
-  console.log("Generated JWT:", token);
-
    res.clearCookie("token", {
     path: "/",
   });
