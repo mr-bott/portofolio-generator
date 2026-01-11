@@ -42,10 +42,15 @@ const DetailsForm = () => {
   const fetchUserData = async () => {
     try {
       const url = process.env.REACT_APP_BACKEND_URL;
+      const token = Cookies.get('token');
       const response = await fetch(`${url}/api/user/email/${gmail}`,
         {
         method: "GET",
-        credentials: "include", 
+         headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // 👈 send token
+        },
+        
       }
       );
       if (response.ok) {
@@ -70,7 +75,7 @@ const DetailsForm = () => {
     e.preventDefault();
     try {
       const url = process.env.REACT_APP_BACKEND_URL;
-      
+      const token = Cookies.get('token');
       // Ensure id is set before submitting
       if (!formData.id) {
         console.error("ID is missing!");
@@ -79,8 +84,9 @@ const DetailsForm = () => {
       const response = await fetch(`${url}/api/user/email/${gmail}`, {
         method: 'PUT',
         credentials: "include",
-        headers: {
-          'Content-Type': 'application/json'
+         headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // 👈 send token
         },
         body: JSON.stringify(formData)
       });
@@ -199,10 +205,14 @@ const DetailsForm = () => {
     imageFormData.append('image', project.file); // Pass the file to FormData
 
     try {
-      const url = process.env.REACT_APP_BACKEND_URL
+      const url = process.env.REACT_APP_BACKEND_URL;
+      const token = Cookies.get('token');
       const response = await fetch(`${url}/upload/image`, {
         method: 'POST',
-        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // 👈 send token
+        },
         body: imageFormData, // Use the renamed FormData
       });
       const data = await response.json();
