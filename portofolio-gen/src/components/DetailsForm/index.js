@@ -9,7 +9,7 @@ import ImageSpinner from '../ImageSpinner';
 const DetailsForm = () => {
   const jwt = Cookies.get('token');
   const decoded = jwt ? jwtDecode(jwt) : null;
-  console.log("Decoded JWT:", decoded);
+  // console.log("Decoded JWT:", decoded);
   const gmail = decoded?.email;
   const { page } = useParams();
   const navigate = useNavigate()

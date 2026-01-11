@@ -12,6 +12,7 @@ const connectDB = require("./config/db");
 
 connectDB();
 app.use(express.json());
+app.set("trust proxy", 1);
 app.use(cors({ origin: process.env.FroentendURL, credentials: true }));
 app.use(cookieParser());
 
