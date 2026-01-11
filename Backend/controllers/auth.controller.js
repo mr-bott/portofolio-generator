@@ -6,9 +6,6 @@ exports.googleCallback = (req, res) => {
     process.env.JWT_SECRET,
     { expiresIn: "1d" }
   );
-   res.clearCookie("token", {
-    path: "/",
-  });
 
   res.cookie("token", token, {
     httpOnly: true,
@@ -16,10 +13,13 @@ exports.googleCallback = (req, res) => {
     sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000,
   });
+
   console.log("Cookie set with token");
 
-  res.redirect(process.env.FroentendURL);
+  // ✅ ENSURE COOKIE IS SENT BEFORE REDIRECT
+  res.status(302).redirect(process.env.FRONTEND_URL);
 };
+
 
 // exports.logout = (req, res) => {
 //   res.clearCookie("token", {
