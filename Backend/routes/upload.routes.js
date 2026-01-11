@@ -19,7 +19,6 @@ const upload = multer({
 
 router.post(
   "/image",
-  auth,
   rateLimiter,
   upload.single("image"),
   controller.uploadImage

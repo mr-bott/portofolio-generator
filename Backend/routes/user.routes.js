@@ -6,6 +6,6 @@ const auth = require('../middlewares/auth.middleware');
 
 router.post('/', rateLimiter, controller.createOrUpdateUser);
 router.put('/email/:email', auth, rateLimiter, controller.updateUserDetails);
-router.get('/email/:email', auth, cache, rateLimiter, controller.getUserByEmail);
+router.get('/email/:email', auth, rateLimiter, controller.getUserByEmail);
 router.get('/:id', rateLimiter, cache, controller.getUserById);
 module.exports = router

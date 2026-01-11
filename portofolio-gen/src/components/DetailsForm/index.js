@@ -83,9 +83,8 @@ const DetailsForm = () => {
       }
       const response = await fetch(`${url}/api/user/email/${gmail}`, {
         method: 'PUT',
-        credentials: "include",
-         headers: {
-          "Content-Type": "application/json",
+        headers: {
+          'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`, // 👈 send token
         },
         body: JSON.stringify(formData)
@@ -206,13 +205,9 @@ const DetailsForm = () => {
 
     try {
       const url = process.env.REACT_APP_BACKEND_URL;
-      const token = Cookies.get('token');
+      // const token = Cookies.get('token');
       const response = await fetch(`${url}/upload/image`, {
         method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // 👈 send token
-        },
         body: imageFormData, // Use the renamed FormData
       });
       const data = await response.json();
