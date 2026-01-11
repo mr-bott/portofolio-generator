@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const session = require("express-session");
+// const session = require("express-session");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
 
@@ -15,22 +15,22 @@ app.use(express.json());
 app.set('trust proxy', 1);
 app.use(cors({ origin: process.env.FroentendURL, credentials: true }));
 app.use(cookieParser());
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    proxy: true,
-    cookie: {
-      httpOnly: true, // important for my case
-      secure: true, // http
-      sameSite: "none",
-    },
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+//     proxy: true,
+//     cookie: {
+//       httpOnly: true, // 
+//       secure: true, // http
+//       sameSite: "none",
+//     },
+//   })
+// );
 
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 
 app.use("/api/user", require("./routes/user.routes"));
 app.use("/upload", require("./routes/upload.routes"));
