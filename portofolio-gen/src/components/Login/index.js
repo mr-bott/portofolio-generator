@@ -39,7 +39,7 @@ function Login() {
   const handleGoogle = () => {
     const url = process.env.REACT_APP_BACKEND_URL
     setCountdown(45);
-  
+    console.log("Redirecting to backend for Google login... urkl:", url);
     window.location.href = `${url}/auth/google`; // Redirect to your backend for Google login
   };
 

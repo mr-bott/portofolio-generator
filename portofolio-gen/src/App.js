@@ -43,7 +43,7 @@ const TokenHandler = () => {
 
   useEffect(() => {
     const jwt = Cookies.get("token"); // read cookie set by backend
-
+    console.log("JWT token from cookie:", jwt);
     if (jwt) {
       navigate("/home");
     } else {

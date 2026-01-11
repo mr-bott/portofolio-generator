@@ -22,8 +22,8 @@ app.use(
     saveUninitialized: false,
     proxy: true,
     cookie: {
-      httpOnly: true,
-      secure: true,
+      httpOnly: false, // important for my case
+      secure: true, // http
       sameSite: "none",
     },
   })

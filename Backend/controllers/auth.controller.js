@@ -8,18 +8,16 @@ exports.googleCallback = (req, res) => {
   );
 
   res.cookie("token", token, {
-    httpOnly: true,
-    secure: true,
+    httpOnly: false,
+    secure:true,
     sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000,
   });
 
-  console.log("Cookie set with token");
+  console.log("JWT cookie set");
 
-  // ✅ ENSURE COOKIE IS SENT BEFORE REDIRECT
-  res.status(302).redirect(process.env.FRONTEND_URL);
+  res.redirect(process.env.FroentendURL);
 };
-
 
 // exports.logout = (req, res) => {
 //   res.clearCookie("token", {
