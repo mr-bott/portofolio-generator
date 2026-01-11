@@ -7,26 +7,15 @@ exports.googleCallback = (req, res) => {
     { expiresIn: "1d" }
   );
 
-  res.cookie("token", token, {
-    httpOnly: true,
-    secure:true,
-    sameSite: "none",
-    maxAge: 24 * 60 * 60 * 1000,
-  });
-
-  console.log("JWT cookie set");
-
-  res.redirect(process.env.FroentendURL);
+  const url = process.env.FroentendURL;
+  res.redirect(`${url}/?token=${token}`);
 };
 
-// exports.logout = (req, res) => {
-//   res.clearCookie("token", {
-//     secure: true,
-//     sameSite: "none",
-//     path: "/"
-//   });
-
-//   req.logout?.(() => {
-//     res.json({ message: "Logout success" });
-//   });
-// };
+exports.logout = (req, res) => {
+  req.logout((err) => {
+    if (err) {
+      return res.status(500).json({ error: "Logout failed" });
+    }
+    res.status(200).json({ error: "Logout success" });
+  });
+};

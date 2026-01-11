@@ -12,22 +12,8 @@ const connectDB = require("./config/db");
 
 connectDB();
 app.use(express.json());
-app.set('trust proxy', 1);
 app.use(cors({ origin: process.env.FroentendURL, credentials: true }));
 app.use(cookieParser());
-// app.use(
-//   session({
-//     secret: process.env.SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: false,
-//     proxy: true,
-//     cookie: {
-//       httpOnly: true, // 
-//       secure: true, // http
-//       sameSite: "none",
-//     },
-//   })
-// );
 
 app.use(
     session({

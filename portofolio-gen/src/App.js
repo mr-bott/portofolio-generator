@@ -38,21 +38,40 @@ function App() {
   );
 }
 
+
 const TokenHandler = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const jwt = Cookies.get("token"); // read cookie set by backend
-    console.log("JWT token from cookie:", jwt);
-    if (jwt) {
+    const params = new URLSearchParams(window.location.search);
+    const urlToken = params.get("token");
+
+    // 1️⃣ If token comes from OAuth redirect
+    if (urlToken) {
+      Cookies.set("token", urlToken, {
+        secure: true,
+        sameSite: "lax",
+        expires: 7,
+      });
+
+      // Clean URL
+      window.history.replaceState({}, document.title, "/");
       navigate("/home");
-    } else {
-      navigate("/login");
+      return;
     }
+
+    // 2️⃣ If token already exists in cookies
+    const cookieToken = Cookies.get("token");
+    if (cookieToken) {
+      navigate("/home");
+      return;
+    }
+
+    // 3️⃣ No token at all
+    navigate("/login");
   }, [navigate]);
 
   return null;
 };
-
 
 export default App;
